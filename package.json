@@ -1,0 +1,46 @@
+{
+  "name": "learning-git-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm-run-all test:*",
+    "test:html": "nu-html-checker *.html",
+    "init-project": "npm install && npm-run-all init:*",
+    "init:dirs": "mkdir -p sass css vendor images js",
+    "init:files": "touch README.md index.html sass/style.scss js/script.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+    "build": "npm-run-all build:* test",
+    "build:clear": "rimraf -rf css/*.css",
+    "build:sass": "node-sass --output-style compact -o css sass",
+    "build:autoprefixer": "autoprefixer-cli css/style.css",
+    "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
+    "watch": "npm-run-all build -p watch:*",
+    "watch:sassprefixer": "onchange sass/*.scss -- npm-run-all watch:sass -p watch:autoprefixer",
+    "watch:sass": "node-sass --output-style expanded --source-map true -o css sass",
+    "watch:autoprefixer": "autoprefixer-cli -o css/style.css css/style.css",
+    "watch:browsersync": "browser-sync start --server --files css/*.css *.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rraaqq/learning-git-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rraaqq/learning-git-2/issues"
+  },
+  "homepage": "https://github.com/rraaqq/learning-git-2#readme",
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.24.4",
+    "node-sass": "^4.9.0",
+    "nu-html-checker": "^0.1.0",
+    "onchange": "^4.0.0",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.3"
+  }
+}
