@@ -6,33 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Trello</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
 
 <body>
-    <div id="board" class="board">
-        <h1>Kanban board</h1>
-        <button class="create-column">Add a column</button>
-        <div class="column-container"></div>
+    <div class="container-fluid">
+        <header class="z-depth-2">
+            <h1 class="">Kanban Board</h1>
+        </header>
+        <section class="">
+            <div id="board" class="board">
+                <button class="btn btn-blue-grey waves-effect create-column">
+                    <i class="fa fa-plus-circle mr-2" aria-hidden="true"></i>Add a column</button>
+                <div class="column-container"></div>
+            </div>
+        </section>
     </div>
+    <footer class="page-footer">
+        <div class="footer-copyright font-small text-center fixed-bottom py-3">© 2018 Copyright: Michał Raczkowski
+        </div>
+    </footer>
 
     <!-- Template Column-->
     <script id="column-template" type="x-tmpl-mustache">
-        <div class="column">
-            <h2 class="column-title">{{ name }}</h2>
-            <ul id={{ id }} class="column-card-list"></ul>
-            <button class="btn-delete">X</button>
-            <button class="add-card">Add a card</button>
+        <div class="column card">
+            <div class="card-header">
+                <h5 class="column-title">{{ name }}</h5>
+                <button class="btn btn-sm btn-blue-grey btn-delete">
+                    <i class="fa fa-close" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="card-body">
+                <ul id={{ id }} class="column-card-list"></ul>
+                <button class="btn btn-blue-grey add-card">
+                    <i class="fa fa-plus-circle mr-2" aria-hidden="true"></i>Add a card</button>
+            </div>
         </div>
     </script>
     <!-- Template Card -->
     <script id="card-template" type="x-tmpl-mustache">
         <div class="card">
+            <div class="card-header">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <button class="btn btn-blue-grey btn-sm btn-delete">
+                    <i class="fa fa-close" aria-hidden="true"></i>
+                </button>
+            </div>
             <p class="card-description">{{ description }}</p>
-            <button class="btn-delete">x</button>
         </div>
     </script>
 
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.6.0/Sortable.min.js"></script>
     <script src="js/script.js"></script>

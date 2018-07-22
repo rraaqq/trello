@@ -1,0 +1,93 @@
+body .container-fluid {
+  padding: 0;
+  background-image: url(https://images.pexels.com/photos/187334/pexels-photo-187334.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-position: center;
+  background-size: cover;
+}
+
+body .container-fluid header {
+  font-family: 'Indie Flower', cursive;
+  height: 10vh;
+  padding-top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body .container-fluid header h1 {
+  text-align: center;
+  margin-top: 0;
+  color: #fff;
+  padding-top: 20px;
+}
+
+body .container-fluid section {
+  min-height: 100vh;
+  text-align: center;
+}
+
+body .container-fluid section .create-column {
+  margin: 20px;
+}
+
+body .container-fluid .column-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+body .container-fluid .column-container .column {
+  max-width: 700px;
+  min-width: 300px;
+  margin: 0 10px;
+  background-color: rgba(227, 227, 227, 0.5);
+}
+
+body .container-fluid .column-container .column .card-header {
+  position: relative;
+}
+
+body .container-fluid .column-container .column .card-header button {
+  position: absolute;
+  top: 5px;
+  right: 2px;
+}
+
+body .container-fluid .column-container .column .card-header .card-body {
+  padding: 5px;
+}
+
+body .container-fluid .column-container .column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+body .container-fluid .column-container .column ul .card {
+  min-height: 150px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .container-fluid .column-container .column ul .card .card-header {
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  height: 50px;
+  padding: 10px 15px;
+  color: #000;
+  font-size: 20px;
+}
+
+body .container-fluid .column-container .column ul .card p {
+  padding: 5px;
+}
+
+body footer p {
+  color: #fff;
+  margin: auto;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,77 @@
+body {
+    .container-fluid {
+        padding: 0;
+        background-image: url(https://images.pexels.com/photos/187334/pexels-photo-187334.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+        background-position: center;
+        background-size: cover;
+        header {
+            font-family: 'Indie Flower', cursive;
+            height: 10vh;
+            padding-top: 0px;
+            background-color: rgba( #000, 0.5);
+            h1 {
+                text-align: center;
+                margin-top: 0;
+                color: #fff;
+                padding-top: 20px;
+            }
+        }
+        section {
+            min-height: 100vh;
+            text-align: center;
+            .create-column {
+                margin: 20px;
+            }
+        }
+        .column-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .column {
+                max-width: 700px;
+                min-width: 300px;
+                margin: 0 10px;
+                background-color: rgba( #e3e3e3, 0.5);
+                .card-header {
+                    position: relative;
+                    button {
+                        position: absolute;
+                        top: 5px;
+                        right: 2px;
+                    }
+                    .card-body {
+                        padding: 5px;
+                    }
+                }
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                    .card {
+                        min-height: 150px;
+                        margin-bottom: 5px;
+                        background-color: #fff;
+                        display: flex;
+                        .card-header {
+                            justify-content: space-between;
+                            height: 50px;
+                            padding: 10px 15px;
+                            color: #000;
+                            font-size: 20px;
+                        }
+                        p {
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        p {
+            color: #fff;
+            margin: auto;
+        }
+    }
+}
