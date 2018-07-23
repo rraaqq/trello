@@ -9,7 +9,7 @@ body .container-fluid header {
   font-family: 'Indie Flower', cursive;
   height: 10vh;
   padding-top: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 body .container-fluid header h1 {
@@ -21,10 +21,13 @@ body .container-fluid header h1 {
 
 body .container-fluid section {
   min-height: 100vh;
+}
+
+body .container-fluid section .button-container {
   text-align: center;
 }
 
-body .container-fluid section .create-column {
+body .container-fluid section .button-container .create-column {
   margin: 20px;
 }
 
@@ -84,10 +87,5 @@ body .container-fluid .column-container .column ul .card .card-header {
 
 body .container-fluid .column-container .column ul .card p {
   padding: 5px;
-}
-
-body footer p {
-  color: #fff;
-  margin: auto;
 }
 /*# sourceMappingURL=style.css.map */

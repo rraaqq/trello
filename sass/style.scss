@@ -18,8 +18,11 @@ body {
         }
         section {
             min-height: 100vh;
-            .create-column {
-                margin: 20px;
+            .button-container {
+                text-align: center;
+                .create-column {
+                    margin: 20px;
+                }
             }
         }
         .column-container {
