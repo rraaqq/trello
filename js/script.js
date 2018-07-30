@@ -107,30 +107,4 @@ document.addEventListener('DOMContentLoaded', function () {
         var column = new Column(name);
         board.addColumn(column);
     });
-
-
-    // CREATING COLUMNS
-    var todoColumn = new Column('To do');
-    var doingColumn = new Column('Doing');
-    var doneColumn = new Column('Done');
-
-    // ADDING COLUMNS TO THE BOARD
-    board.addColumn(todoColumn);
-    board.addColumn(doingColumn);
-    board.addColumn(doneColumn);
-
-    // CREATING CARDS
-    var card1 = new Card('New task');
-    var card2 = new Card('New task');
-    var card3 = new Card('New task');
-    var card4 = new Card('Create kanban boards');
-    var card5 = new Card('Learn JavaScript');
-
-
-    // ADDING CARDS TO COLUMNS
-    todoColumn.addCard(card1);
-    todoColumn.addCard(card2);
-    todoColumn.addCard(card3);
-    doneColumn.addCard(card4);
-    doingColumn.addCard(card5);
 });

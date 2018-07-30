@@ -1,7 +1,7 @@
 // Board Object
 
 var board = {
-    name: 'Kanban Board',
+    name: 'Tablica Kanban',
     addColumn: function (column) {
         this.element.appendChild(column.element);
         initSortable(column.id);
@@ -14,7 +14,8 @@ var board = {
 document.querySelector('#board .create-column').addEventListener('click', function () {
     var name = prompt('Enter a column name');
     if(!name.length) {
-        alert('Enter a column name, Please');
+        alert("Enter a column name, Please");
+        return;
     };
     var data = new FormData();
 
@@ -29,8 +30,8 @@ document.querySelector('#board .create-column').addEventListener('click', functi
             return resp.json();
         })
         .then(function (resp) {
-            var column = new Column(response.id, columnName);
-            board.createColumn(column);
+            var column = new Column(resp.id, name);
+            board.addColumn(column);
         });
 });
 
@@ -42,4 +43,4 @@ function initSortable(id) {
         group: 'kanban',
         sort: true
     });
-}
+};
